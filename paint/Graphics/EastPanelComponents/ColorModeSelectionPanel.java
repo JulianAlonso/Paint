@@ -1,6 +1,6 @@
 
 
-package paint.EastPanelComponents;
+package paint.Graphics.EastPanelComponents;
 
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;

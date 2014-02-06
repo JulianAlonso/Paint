@@ -1,6 +1,6 @@
 
 
-package paint.TopPanelComponents.MicroComponents;
+package paint.Graphics.TopPanelComponents.MicroComponents;
 
 import javax.swing.ImageIcon;
 import javax.swing.JButton;

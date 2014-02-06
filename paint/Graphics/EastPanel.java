@@ -1,9 +1,9 @@
 
 
-package paint;
+package paint.Graphics;
 
-import paint.EastPanelComponents.ColorSelectionPanel;
-import paint.EastPanelComponents.ColorModeSelectionPanel;
+import paint.Graphics.EastPanelComponents.ColorSelectionPanel;
+import paint.Graphics.EastPanelComponents.ColorModeSelectionPanel;
 import java.awt.BorderLayout;
 import javax.swing.JPanel;
 

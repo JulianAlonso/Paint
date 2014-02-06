@@ -1,8 +1,9 @@
 
 
-package paint.EastPanelComponents;
+package paint.Res;
 
 import java.awt.Color;
+import paint.Graphics.EastPanelComponents.ColorModeSelectionPanel;
 
 /**
  *

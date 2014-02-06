@@ -4,6 +4,8 @@
  */
 package paint;
 
+import paint.Graphics.PaintZone;
+import paint.Graphics.EastPanel;
 import java.awt.BorderLayout;
 import java.awt.Dimension;
 import javax.swing.JFrame;

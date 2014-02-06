@@ -1,6 +1,6 @@
 
 
-package paint;
+package paint.Graphics;
 
 /**
  *

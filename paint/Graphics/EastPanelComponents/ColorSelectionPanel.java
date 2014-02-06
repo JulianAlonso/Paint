@@ -1,8 +1,8 @@
 
 
-package paint.EastPanelComponents;
+package paint.Graphics.EastPanelComponents;
 
-import paint.EastPanelComponents.MicroComponents.ColorSelectionButton;
+import paint.Graphics.EastPanelComponents.MicroComponents.ColorSelectionButton;
 import java.awt.Color;
 import java.awt.GridLayout;
 import java.util.ArrayList;
