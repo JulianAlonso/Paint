@@ -22,7 +22,8 @@ public class Form {
         this.type = type;
         this.start = start;
         this.end = end;
-        this.colorRelleno = colorBorde;
+        this.colorRelleno = colorRelleno;
+        this.colorBorde = colorBorde;
     }
     
     public DrawElementEnum getType() {

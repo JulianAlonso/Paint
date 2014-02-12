@@ -11,6 +11,7 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import paint.Logic.Coordinates;
 import paint.Logic.Utils.FormFactory;
+import paint.Res.Colors;
 import paint.Res.Forms;
 
 /**
