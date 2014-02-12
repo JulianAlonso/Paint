@@ -59,10 +59,6 @@ public class PaintZone extends Canvas {
     @Override
     public void paint(Graphics g) {
         Forms.paintAll((Graphics2D)g);
-        //g.setColor(Colors.relleno);
-        //g.fillRect(squareX, squareY, squareW, squareH);
-        //g.setColor(Colors.borde);
-        //g.drawRect(squareX, squareY, squareW, squareH);
     }
     
 }

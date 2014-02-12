@@ -24,6 +24,7 @@ public class Draw {
             case ARC:
                 break;
             case RECTANGLE:
+                Draws.DrawRectangle(g2, form);
                 break;
             case CURVED_RECTANGLE:
                 break;

@@ -36,6 +36,12 @@ public class Coordinates {
         Coordinates.end.y = y;
     }
     
+    public static void invert() {
+        Point temp = new Point(Coordinates.start);
+        Coordinates.start = Coordinates.end;
+        Coordinates.end = temp;
+    }
+    
     public static Point getStart() {
         return Coordinates.start;
     }
