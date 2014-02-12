@@ -10,6 +10,7 @@ import java.awt.BorderLayout;
 import java.awt.Dimension;
 import javax.swing.JFrame;
 import javax.swing.SwingUtilities;
+import paint.Graphics.TopPanel;
 
 /**
  *
@@ -17,16 +18,16 @@ import javax.swing.SwingUtilities;
  */
 public class Paint {
     
-    private static void createAndShowGUI() {
-        System.out.println("Created Gui on EDT? " +
-                SwingUtilities.isEventDispatchThread());
-        
+    private static void createAndShowGUI() {  
         JFrame f = new JFrame("Swing Paint Demo");
         f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         f.setPreferredSize(new Dimension(800, 600));
         f.setLayout(new BorderLayout());
+        //ADS ////////////////////////////////////////////
         f.add(new EastPanel(), BorderLayout.EAST);
         f.add(new PaintZone(), BorderLayout.CENTER);
+        f.add(new TopPanel(), BorderLayout.NORTH);
+        //END ADDS ///////////////////////////////////////
         f.pack();
         f.setVisible(true);
     }

@@ -9,11 +9,18 @@ import paint.Graphics.EastPanelComponents.ColorModeSelectionPanel;
  *
  * @author julialonso
  */
-public class Colors {   
+public class Colors {
     
-    public static Color relleno = Color.WHITE;
-    public static Color borde = Color.BLACK;
+    private static Color relleno = Color.WHITE;
+    private  static Color borde = Color.BLACK;
     
+    public static Color getRelleno() {
+        return Colors.relleno;
+    }
+    
+    public static Color getBorde() {
+        return Colors.borde;
+    }
     
     public static void setSelectedColor(Color color) {
         if(ColorModeSelectionPanel.selectedMode.equals("Relleno"))
