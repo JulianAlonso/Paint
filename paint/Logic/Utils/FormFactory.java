@@ -2,10 +2,12 @@
 
 package paint.Logic.Utils;
 
-import paint.Logic.Coordinates;
+import paint.Logic.DrawSettings.Coordinates;
 import paint.Logic.Entity.Form;
-import paint.Res.Colors;
-import paint.Res.DrawElement;
+import paint.Logic.DrawSettings.Colors;
+import paint.Logic.DrawSettings.Strokes;
+import paint.Logic.DrawSettings.ElementToDraw;
+import paint.Logic.DrawSettings.GeneralPathSettings;
 
 /**
  *
@@ -14,9 +16,9 @@ import paint.Res.DrawElement;
 public class FormFactory {
     
     public static Form getActualForm() {
-        return new Form(DrawElement.getDrawElement(), Coordinates.getStart(),
+        return new Form(ElementToDraw.getDrawElement(), Coordinates.getStart(),
                         Coordinates.getEnd(), Colors.getRelleno(),
-                        Colors.getBorde());
+                        Colors.getBorde(), Strokes.getStroke(), GeneralPathSettings.getGP());
     }
     
 }

@@ -1,6 +1,6 @@
 
 
-package paint.Logic;
+package paint.Logic.DrawSettings;
 
 import java.awt.Point;
 
@@ -14,16 +14,19 @@ public class Coordinates {
     private static Point end;
     
     public static void setStartAndEnd(Point start) {
-        Coordinates.start = start;
-        Coordinates.end = start;
+        Coordinates.setStart(start);
+        Coordinates.setEnd(start);
     }
     
     public static void setStart(Point start) {
         Coordinates.start = start;
+        GeneralPathSettings.resetGP();
+        GeneralPathSettings.moveTo(start);
     }
     
     public static void setEnd(Point end) {
         Coordinates.end = end;
+        GeneralPathSettings.lineTo(end);
     }
     
     public static void setStart(int x, int y) {

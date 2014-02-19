@@ -1,6 +1,6 @@
 
 
-package paint.Res;
+package paint.Logic.DrawSettings;
 
 import java.awt.Color;
 import paint.Graphics.EastPanelComponents.ColorModeSelectionPanel;

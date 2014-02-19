@@ -1,19 +1,21 @@
-package paint.Res;
+package paint.Logic.DrawSettings;
+
+import paint.Res.DrawElementEnum;
 
 /**
  *
  * @author julialonso
  */
-public class DrawElement {
+public class ElementToDraw {
     
     private static DrawElementEnum type = DrawElementEnum.NOTINGH;
     
     public static void setDrawElement(DrawElementEnum element) {
-        DrawElement.type = element;
+        ElementToDraw.type = element;
     }
     
     public static DrawElementEnum getDrawElement() {
-        return DrawElement.type;
+        return ElementToDraw.type;
     }
     
 }

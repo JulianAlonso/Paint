@@ -18,15 +18,22 @@ public class Draw {
     
     public static void drawForm(Graphics2D g2, Form form) {
         switch(form.getType()) {
+            case FREELINE:
+                Draws.drawFreeLine(g2, form);
+                break;
             case LINE:
-                Draws.DrawLine(g2, form);
+                Draws.drawLine(g2, form);
+                break;
+            case POLYGON:
+                Draws.drawPolygon(g2, form);
                 break;
             case ARC:
                 break;
             case RECTANGLE:
-                Draws.DrawRectangle(g2, form);
+                Draws.drawRectangle(g2, form);
                 break;
             case CURVED_RECTANGLE:
+                Draws.drawCurvedRectangle(g2, form);
                 break;
         }
     }

@@ -6,7 +6,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
-import paint.Res.DrawElement;
+import paint.Logic.DrawSettings.ElementToDraw;
 import paint.Res.DrawElementEnum;
 
 /**
@@ -27,7 +27,7 @@ public class DrawingElementButton extends JButton {
         this.addActionListener(new ActionListener(){
             @Override
             public void actionPerformed(ActionEvent e) {
-                DrawElement.setDrawElement(type);
+                ElementToDraw.setDrawElement(type);
             }
         });
     }

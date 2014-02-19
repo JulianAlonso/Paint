@@ -11,6 +11,7 @@ import java.awt.Dimension;
 import javax.swing.JFrame;
 import javax.swing.SwingUtilities;
 import paint.Graphics.TopPanel;
+import paint.Graphics.WestPanel;
 
 /**
  *
@@ -27,6 +28,7 @@ public class Paint {
         f.add(new EastPanel(), BorderLayout.EAST);
         f.add(new PaintZone(), BorderLayout.CENTER);
         f.add(new TopPanel(), BorderLayout.NORTH);
+        f.add(new WestPanel(), BorderLayout.WEST);
         //END ADDS ///////////////////////////////////////
         f.pack();
         f.setVisible(true);

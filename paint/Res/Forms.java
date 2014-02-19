@@ -11,9 +11,10 @@ import paint.Logic.Entity.Form;
  *
  * @author julialonso
  */
-public class Forms {
+public final class Forms {
     
     private static ArrayList<Form> forms = new ArrayList<>();
+    private static int invisibles = 0;
     
     public synchronized static void setLastForm(Form form){
         if(Forms.forms.size() < 1) 
@@ -32,4 +33,20 @@ public class Forms {
         }
     }
     
+    public synchronized static void undoForm() {
+        Forms.forms.get(Forms.forms.size()-1-invisibles).setVisible(false);
+        Forms.invisibles++;
+    }
+    
+    public synchronized static void redoForm() {
+        Forms.forms.get(Forms.forms.size()-1-invisibles).setVisible(true);
+        Forms.invisibles--;
+    }
+    
+    public synchronized static void resetInvisibles() {
+        while(invisibles != 0) {
+            Forms.forms.remove(forms.size()-1);
+            invisibles--;
+        }
+    }
 }

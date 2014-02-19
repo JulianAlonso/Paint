@@ -9,9 +9,8 @@ import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
-import paint.Logic.Coordinates;
+import paint.Logic.DrawSettings.Coordinates;
 import paint.Logic.Utils.FormFactory;
-import paint.Res.Colors;
 import paint.Res.Forms;
 
 /**
@@ -32,19 +31,21 @@ public class PaintZone extends Canvas {
             @Override
             public void mousePressed(MouseEvent me) {
                 Coordinates.setStartAndEnd(me.getPoint());
+                Forms.resetInvisibles();
                 Forms.addForm(FormFactory.getActualForm());
             }
             @Override
             public void mouseClicked(MouseEvent me) {
                 //moveSquare(me.getX(), me.getY());
             }
+            
         });
         
         addMouseMotionListener(new MouseAdapter() {
             @Override
             public void mouseDragged(MouseEvent me) {
-                Coordinates.setEnd(me.getPoint());
                 Forms.setLastForm(FormFactory.getActualForm());
+                Coordinates.setEnd(me.getPoint());
                 repaint();
             };
         });
