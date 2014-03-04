@@ -28,6 +28,7 @@ public class Draw {
                 Draws.drawPolygon(g2, form);
                 break;
             case ARC:
+                Draws.drawArc(g2, form);
                 break;
             case RECTANGLE:
                 Draws.drawRectangle(g2, form);

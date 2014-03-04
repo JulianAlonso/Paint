@@ -20,6 +20,6 @@ public final class Images {
     public static final ImageIcon PENCIL = new ImageIcon(Images.class.getResource("./Images/pencil.png"));
     public static final ImageIcon UNDO = new ImageIcon(Images.class.getResource("./Images/undo.png"));
     public static final ImageIcon REDO = new ImageIcon(Images.class.getResource("./Images/redo.png"));
-    
+    public static final ImageIcon POLYGON = new ImageIcon(Images.class.getResource("./Images/poligono.png"));
     
 }

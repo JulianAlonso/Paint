@@ -12,10 +12,12 @@ public class Coordinates {
     
     private static Point start;
     private static Point end;
+    private static Point cuved;
     
     public static void setStartAndEnd(Point start) {
         Coordinates.setStart(start);
         Coordinates.setEnd(start);
+        Coordinates.cuved = null;
     }
     
     public static void setStart(Point start) {
@@ -51,5 +53,20 @@ public class Coordinates {
     
     public static Point getEnd() {
         return Coordinates.end;
+    }
+    
+    public static void closeGP() {
+        GeneralPathSettings.closeGP();
+    }
+    
+    public static Point getCurved() {
+        if (Coordinates.cuved == null)
+            return Coordinates.start;
+        else
+            return Coordinates.cuved;
+    }    
+    
+    public static void setCurved(Point curved) {
+        Coordinates.cuved = curved;
     }
 }

@@ -49,4 +49,8 @@ public final class Forms {
             invisibles--;
         }
     }
+    
+    public synchronized static void deleteAll() {
+        Forms.forms.clear();
+    }
 }

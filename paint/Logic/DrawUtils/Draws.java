@@ -3,6 +3,7 @@
 package paint.Logic.DrawUtils;
 
 import java.awt.Graphics2D;
+import java.awt.geom.QuadCurve2D;
 import paint.Logic.Entity.Form;
 import paint.Logic.Utils.Check;
 
@@ -26,7 +27,17 @@ public class Draws {
     }
     
     public static void drawPolygon(Graphics2D g2, Form form) {
-        
+        g2.setColor(form.getColorBorde());
+        g2.setStroke(form.getStroke());
+        g2.draw(form.getGP());
+    }
+    
+    public static void drawArc(Graphics2D g2, Form form) {
+        QuadCurve2D c = new QuadCurve2D.Float(0, 0, 0, 0, 0, 0);
+        c.setCurve(form.getStart(), form.getCurved(), form.getEnd());
+        g2.setColor(form.getColorBorde());
+        g2.setStroke(form.getStroke());
+        g2.draw(c);
     }
     
     public static void drawRectangle(Graphics2D g2, Form form) {

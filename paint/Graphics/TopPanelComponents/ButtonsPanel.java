@@ -17,7 +17,7 @@ import paint.Res.Images;
 public class ButtonsPanel extends JPanel {
     
     private DrawingElementButton line, arc, rectangle, curvedRectangle,
-                                 freeLine;
+                                 freeLine, polygon;
     
     private ReDoButton redoButton;
     private UnDoButton undoButton;
@@ -39,6 +39,9 @@ public class ButtonsPanel extends JPanel {
                 Images.RECTANGLE, DrawElementEnum.RECTANGLE);
         this.curvedRectangle = new DrawingElementButton(
                 Images.RECTANGLE_CURVED, DrawElementEnum.CURVED_RECTANGLE);
+        this.polygon = new DrawingElementButton(
+                Images.POLYGON, DrawElementEnum.POLYGON);
+        
         
         this.redoButton = new ReDoButton(Images.REDO);
         this.undoButton = new UnDoButton(Images.UNDO);
@@ -50,6 +53,7 @@ public class ButtonsPanel extends JPanel {
         this.add(this.freeLine);
         this.add(this.line);
         this.add(this.arc);
+        this.add(this.polygon);
         this.add(this.rectangle);
         this.add(this.curvedRectangle);
     }

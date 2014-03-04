@@ -18,7 +18,8 @@ public class FormFactory {
     public static Form getActualForm() {
         return new Form(ElementToDraw.getDrawElement(), Coordinates.getStart(),
                         Coordinates.getEnd(), Colors.getRelleno(),
-                        Colors.getBorde(), Strokes.getStroke(), GeneralPathSettings.getGP());
+                        Colors.getBorde(), Strokes.getStroke(), GeneralPathSettings.getGP(),
+                        Coordinates.getCurved());
     }
     
 }

@@ -19,16 +19,21 @@ import paint.Graphics.WestPanel;
  */
 public class Paint {
     
+    private static EastPanel east = new EastPanel();
+    private static PaintZone paint = new PaintZone();
+    private static TopPanel top = new TopPanel();
+    private static WestPanel west = new WestPanel();
+    
     private static void createAndShowGUI() {  
         JFrame f = new JFrame("Swing Paint Demo");
         f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         f.setPreferredSize(new Dimension(800, 600));
         f.setLayout(new BorderLayout());
         //ADS ////////////////////////////////////////////
-        f.add(new EastPanel(), BorderLayout.EAST);
-        f.add(new PaintZone(), BorderLayout.CENTER);
-        f.add(new TopPanel(), BorderLayout.NORTH);
-        f.add(new WestPanel(), BorderLayout.WEST);
+        f.add(east, BorderLayout.EAST);
+        f.add(paint, BorderLayout.CENTER);
+        f.add(top, BorderLayout.NORTH);
+        f.add(west, BorderLayout.WEST);
         //END ADDS ///////////////////////////////////////
         f.pack();
         f.setVisible(true);
@@ -46,4 +51,5 @@ public class Paint {
             }
         });
     }
+    
 }

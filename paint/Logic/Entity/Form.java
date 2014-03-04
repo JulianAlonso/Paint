@@ -17,6 +17,7 @@ public class Form {
     private DrawElementEnum type;
     private Point start;
     private Point end;
+    private Point curved;
     private Color colorRelleno;
     private Color colorBorde;
     private Stroke stroke;
@@ -26,7 +27,7 @@ public class Form {
     
     public Form(DrawElementEnum type, Point start, Point end, 
             Color colorRelleno, Color colorBorde, Stroke stroke,
-            GeneralPath gp) {
+            GeneralPath gp, Point curved) {
         this.type = type;
         this.start = start;
         this.end = end;
@@ -34,6 +35,7 @@ public class Form {
         this.colorBorde = colorBorde;
         this.stroke = stroke;
         this.gp = gp;
+        this.curved = curved;
         this.visible = true;
     }
     
@@ -63,6 +65,14 @@ public class Form {
     
     public GeneralPath getGP() {
         return this.gp;
+    }
+    
+    public Point getCurved() {
+        return this.curved;
+    }
+
+    public void setCurved(Point curved) {
+        this.curved = curved;
     }
     
     public boolean isVisible() {

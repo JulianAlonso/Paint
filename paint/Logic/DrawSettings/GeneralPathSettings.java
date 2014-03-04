@@ -28,4 +28,8 @@ public class GeneralPathSettings {
     public static GeneralPath getGP() {
         return GeneralPathSettings.gp;
     }
+    
+    public static void closeGP() {
+        GeneralPathSettings.gp.closePath();
+    }
 }
