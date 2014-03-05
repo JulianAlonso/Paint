@@ -1,15 +1,15 @@
 package paint.Graphics;
 
-import java.awt.Canvas;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import javax.swing.JPanel;
+import javax.swing.SwingUtilities;
 import paint.Logic.DrawSettings.Coordinates;
 import paint.Logic.DrawSettings.ElementToDraw;
-import paint.Logic.Entity.Form;
 import paint.Logic.Utils.FormFactory;
 import paint.Res.DrawElementEnum;
 import paint.Res.Forms;
@@ -18,7 +18,7 @@ import paint.Res.Forms;
  *
  * @author julialonso
  */
-public class PaintZone extends Canvas {
+public class PaintZone extends JPanel{
 
     private int squareX = 50;
     private int squareY = 50;
@@ -41,10 +41,8 @@ public class PaintZone extends Canvas {
                     try {
                         Forms.moveToLastForm(me.getPoint()).getColorBorde();
                         Forms.setLastPoint(me.getPoint());
-                        System.out.println("no peto");
                     } catch (Exception e) {
-                        //ElementToDraw.setDrawElement(DrawElementEnum.NOTINGH);
-                        System.err.println("no hay forma");
+                        ElementToDraw.setDrawElement(DrawElementEnum.NOTINGH);
                     }
                 }
             }
@@ -76,7 +74,6 @@ public class PaintZone extends Canvas {
                         clicks = 0;
                     }
 
-
                 }
             }
 
@@ -86,6 +83,9 @@ public class PaintZone extends Canvas {
                     if (ElementToDraw.getDrawElement() == DrawElementEnum.POLYGON
                             || ElementToDraw.getDrawElement() == DrawElementEnum.ARC) {
                         clicks++;
+                    }
+                    if (ElementToDraw.getDrawElement() == DrawElementEnum.MOVE) {
+                        clicks = 0;
                     }
                 }
             }
@@ -123,7 +123,7 @@ public class PaintZone extends Canvas {
                 BottomPanel.setCoordinates(me.getPoint());
             }
         });
-
+        
     }
 
     @Override
@@ -133,6 +133,8 @@ public class PaintZone extends Canvas {
 
     @Override
     public void paint(Graphics g) {
+        super.paint((Graphics2D)g);
         Forms.paintAll((Graphics2D) g);
     }
+    
 }

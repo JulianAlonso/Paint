@@ -8,7 +8,10 @@ import paint.Graphics.PaintZone;
 import paint.Graphics.EastPanel;
 import java.awt.BorderLayout;
 import java.awt.Dimension;
+import java.awt.Graphics2D;
+import java.awt.image.BufferedImage;
 import javax.swing.JFrame;
+import javax.swing.JPanel;
 import javax.swing.SwingUtilities;
 import paint.Graphics.BottomPanel;
 import paint.Graphics.TopPanel;
@@ -19,14 +22,14 @@ import paint.Graphics.WestPanel;
  * @author julialonso
  */
 public class Paint {
-    
+
     private static EastPanel east = new EastPanel();
     private static PaintZone paint = new PaintZone();
     private static TopPanel top = new TopPanel();
     private static WestPanel west = new WestPanel();
     private static BottomPanel bottom = new BottomPanel();
-    
-    private static void createAndShowGUI() {  
+
+    private static void createAndShowGUI() {
         JFrame f = new JFrame("Swing Paint Demo");
         f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         f.setPreferredSize(new Dimension(800, 600));
@@ -41,7 +44,7 @@ public class Paint {
         f.pack();
         f.setVisible(true);
     }
-    
+
     /**
      * @param args the command line arguments
      */
@@ -54,5 +57,13 @@ public class Paint {
             }
         });
     }
+
+    public static void repaint() {
+        paint.paintComponents(paint.getGraphics());
+        
+    }
     
+    public static JPanel getPaint() {
+        return paint;
+    }
 }

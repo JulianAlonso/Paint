@@ -23,5 +23,5 @@ public final class Images {
     public static final ImageIcon POLYGON = new ImageIcon(Images.class.getResource("./Images/poligono.png"));
     public static final ImageIcon OVAL = new ImageIcon(Images.class.getResource("./Images/elipse.png"));
     public static final ImageIcon MOVE = new ImageIcon(Images.class.getResource("./Images/frame_edit.png"));
-    
+    public static final ImageIcon SAVE = new ImageIcon(Images.class.getResource("./Images/save.png"));
 }

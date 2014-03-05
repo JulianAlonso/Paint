@@ -31,7 +31,8 @@ public final class Forms {
     
     public synchronized static void paintAll(Graphics2D g2) {
         for(Form form: Forms.forms) {
-            Draw.drawForm(g2, form);
+            if (form.isVisible())
+                Draw.drawForm(g2, form);
         }
     }
     
@@ -41,8 +42,8 @@ public final class Forms {
     }
     
     public synchronized static void redoForm() {
-        Forms.forms.get(Forms.forms.size()-1-invisibles).setVisible(true);
         Forms.invisibles--;
+        Forms.forms.get(Forms.forms.size()-1-invisibles).setVisible(true);
     }
     
     public synchronized static void resetInvisibles() {
@@ -77,6 +78,10 @@ public final class Forms {
         Form temp = forms.get(forms.size()-1);
         Point start = new Point(temp.getStart().x + p.x - antiguo.x, temp.getStart().y + p.y - antiguo.y);
         Point end = new Point(temp.getEnd().x + p.x - antiguo.x, temp.getEnd().y + p.y - antiguo.y);
+        if(temp.getCurved() != null) {
+            Point curved = new Point(temp.getCurved().x + p.x - antiguo.x, temp.getCurved().y + p.y - antiguo.y);
+            temp.setCurved(curved);
+        }
         temp.setStart(start);
         temp.setEnd(end);
     }
