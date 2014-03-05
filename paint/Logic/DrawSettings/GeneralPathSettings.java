@@ -32,4 +32,9 @@ public class GeneralPathSettings {
     public static void closeGP() {
         GeneralPathSettings.gp.closePath();
     }
+    
+    public static void setGP(GeneralPath generalPath) {
+        GeneralPathSettings.gp = generalPath;
+    }
+    
 }

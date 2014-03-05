@@ -13,5 +13,7 @@ public enum DrawElementEnum {
     RECTANGLE,
     CURVED_RECTANGLE,
     POLYGON,
+    OVAL,
+    MOVE,
     NOTINGH
 }

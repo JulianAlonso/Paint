@@ -38,6 +38,18 @@ public class Form {
         this.curved = curved;
         this.visible = true;
     }
+
+    public Form(Form form) {
+        this.type = form.getType();
+        this.start = form.getStart();
+        this.end = form.getEnd();
+        this.curved = form.getCurved();
+        this.colorRelleno = form.getColorRelleno();
+        this.colorBorde = form.getColorBorde();
+        this.stroke = form.getStroke();
+        this.visible = form.isVisible();
+        this.gp = form.getGP();
+    }
     
     public DrawElementEnum getType() {
         return this.type;

@@ -8,7 +8,7 @@ import paint.Res.DrawElementEnum;
  */
 public class ElementToDraw {
     
-    private static DrawElementEnum type = DrawElementEnum.NOTINGH;
+    private static DrawElementEnum type = DrawElementEnum.FREELINE;
     
     public static void setDrawElement(DrawElementEnum element) {
         ElementToDraw.type = element;

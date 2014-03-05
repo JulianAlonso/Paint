@@ -27,8 +27,11 @@ public class Draws {
     }
     
     public static void drawPolygon(Graphics2D g2, Form form) {
-        g2.setColor(form.getColorBorde());
         g2.setStroke(form.getStroke());
+        g2.setColor(form.getColorRelleno());
+        g2.fill(form.getGP());
+        
+        g2.setColor(form.getColorBorde());
         g2.draw(form.getGP());
     }
     
@@ -69,4 +72,19 @@ public class Draws {
                     form.getEnd().y - form.getStart().y,
                     20, 20);
     }
+    
+    public static void drawOval(Graphics2D g2, Form form) {
+        Check.checkPoints(form);
+        g2.setStroke(form.getStroke());
+        g2.setColor(form.getColorRelleno());
+        g2.fillOval(form.getStart().x, form.getStart().y, 
+                    form.getEnd().x - form.getStart().x,
+                    form.getEnd().y - form.getStart().y);
+        
+        g2.setColor(form.getColorBorde());
+        g2.drawOval(form.getStart().x, form.getStart().y, 
+                    form.getEnd().x - form.getStart().x, 
+                    form.getEnd().y - form.getStart().y);
+    }
+    
 }

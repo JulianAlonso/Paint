@@ -13,6 +13,7 @@ public class Coordinates {
     private static Point start;
     private static Point end;
     private static Point cuved;
+    private static Point moved;
     
     public static void setStartAndEnd(Point start) {
         Coordinates.setStart(start);
@@ -39,6 +40,14 @@ public class Coordinates {
     public static void setEnd(int x, int y) {
         Coordinates.end.x = x;
         Coordinates.end.y = y;
+    }
+
+    public static Point getMoved() {
+        return moved;
+    }
+
+    public static void setMoved(Point moved) {
+        Coordinates.moved = moved;
     }
     
     public static void invert() {

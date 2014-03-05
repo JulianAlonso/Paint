@@ -5,10 +5,7 @@ package paint.Logic;
 import java.awt.Graphics2D;
 import paint.Logic.DrawUtils.Draws;
 import paint.Logic.Entity.Form;
-import static paint.Res.DrawElementEnum.ARC;
-import static paint.Res.DrawElementEnum.CURVED_RECTANGLE;
-import static paint.Res.DrawElementEnum.LINE;
-import static paint.Res.DrawElementEnum.RECTANGLE;
+import static paint.Res.DrawElementEnum.*;
 
 /**
  *
@@ -30,12 +27,16 @@ public class Draw {
             case ARC:
                 Draws.drawArc(g2, form);
                 break;
+            case OVAL:
+                Draws.drawOval(g2, form);
+                break;
             case RECTANGLE:
                 Draws.drawRectangle(g2, form);
                 break;
             case CURVED_RECTANGLE:
                 Draws.drawCurvedRectangle(g2, form);
                 break;
+            
         }
     }
     

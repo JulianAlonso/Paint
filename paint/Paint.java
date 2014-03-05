@@ -10,6 +10,7 @@ import java.awt.BorderLayout;
 import java.awt.Dimension;
 import javax.swing.JFrame;
 import javax.swing.SwingUtilities;
+import paint.Graphics.BottomPanel;
 import paint.Graphics.TopPanel;
 import paint.Graphics.WestPanel;
 
@@ -23,6 +24,7 @@ public class Paint {
     private static PaintZone paint = new PaintZone();
     private static TopPanel top = new TopPanel();
     private static WestPanel west = new WestPanel();
+    private static BottomPanel bottom = new BottomPanel();
     
     private static void createAndShowGUI() {  
         JFrame f = new JFrame("Swing Paint Demo");
@@ -34,6 +36,7 @@ public class Paint {
         f.add(paint, BorderLayout.CENTER);
         f.add(top, BorderLayout.NORTH);
         f.add(west, BorderLayout.WEST);
+        f.add(bottom, BorderLayout.SOUTH);
         //END ADDS ///////////////////////////////////////
         f.pack();
         f.setVisible(true);

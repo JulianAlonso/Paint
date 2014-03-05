@@ -12,7 +12,7 @@ import paint.Graphics.EastPanelComponents.ColorModeSelectionPanel;
 public class Colors {
     
     private static Color relleno = Color.WHITE;
-    private  static Color borde = Color.BLACK;
+    private static Color borde = Color.BLACK;
     
     public static Color getRelleno() {
         return Colors.relleno;
@@ -20,6 +20,14 @@ public class Colors {
     
     public static Color getBorde() {
         return Colors.borde;
+    }
+    
+    public static void setBorde(Color borde) {
+        Colors.borde = borde;
+    }
+
+    public static void setRelleno(Color relleno) {
+        Colors.relleno = relleno;
     }
     
     public static void setSelectedColor(Color color) {
